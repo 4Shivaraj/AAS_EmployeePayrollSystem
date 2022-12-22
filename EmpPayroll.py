@@ -34,7 +34,7 @@ class EmployeePayroll(BaseModel):
     salary: float
     
 
-@api.get('/home/', response_class=HTMLResponse)
+@api.get('/', response_class=HTMLResponse)
 def home(request: Request):
     return templates.TemplateResponse('home.html', {"request": request})
 
